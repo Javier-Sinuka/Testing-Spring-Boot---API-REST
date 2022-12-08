@@ -23,7 +23,7 @@ public class TemperaturaController {
         int acumulador = temperatura.getTemperatura();
         interTemperatura.saveTemperatura(temperatura);
         deleteTemperaturaSinTexto(temperatura.getId());
-        int conversor = acumulador - 32;
+        int conversor = (acumulador - 32) * (1/2);
         return "La conversion de " + acumulador + " Faranheit es " + conversor + " Celcius";
     }
 
